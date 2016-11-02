@@ -1,0 +1,7 @@
+<suite name="Catalog Check Suite" verbose="1">
+  <test name="Straight Talk Catalog Check">
+    <classes>
+      <class name="straighttalkcatalog.StraightTalk_Catalog" />
+    </classes>
+  </test>
+</suite>

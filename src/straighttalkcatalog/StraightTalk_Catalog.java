@@ -1,4 +1,4 @@
-package newpackage;
+package straighttalkcatalog;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
