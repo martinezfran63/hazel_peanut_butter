@@ -16,7 +16,7 @@ public class Regular_to_catalog  {
 	
 	public static void main (WebDriver mydriver,String Bright_Point_Price, String Name, int i, String Catalog_Price) throws IOException{
 		
-		System.out.println("*For phones that go straight to catalog");
+		System.out.println("*For regular phones that go straight to cart");
 		
 	
 
@@ -24,7 +24,7 @@ public class Regular_to_catalog  {
 		 try
 		   {
 			   TimeUnit.SECONDS.sleep(3);	
-			   System.out.println("straight to catalog: Get Price");
+			   System.out.println("Phone to Cart: Get Price");
 
 			   //Get price
 			   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
@@ -32,7 +32,7 @@ public class Regular_to_catalog  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		    System.out.println("Unable to click 'Proceed To bright Point' ");
+		    System.out.println("Phone to Cart: Unable to click 'Proceed To bright Point' ");
 		   
 		   }
 
@@ -40,7 +40,7 @@ public class Regular_to_catalog  {
 		   try
 		   {
 			   TimeUnit.SECONDS.sleep(3);	
-			   System.out.println("straight to catalog: CLick 'Proceed to Checkout'");
+			   System.out.println("Phone to Cart: Click 'Proceed to Checkout'");
 			   
 			   //screen shot on our catalog
 			   PrintScreen.take_screenshot(mydriver, Name, i);
@@ -50,14 +50,14 @@ public class Regular_to_catalog  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-			   System.out.println("Unable to click 'Proceed To Checkout' ");
+			   System.out.println("Phone to Cart: Unable to click 'Proceed To Checkout' ");
 		   
 		   }
 		   
 		   //get price at BP
 		   try
 		   {
-			   System.out.println("straight to catalog: Get price at BP");
+			   System.out.println("Phone to Cart: Get price at BP");
 			   //screen shot on Bright Point Catalog
 		       PrintScreen.take_screenshot(mydriver, Name, i);
 			   //Get price
@@ -68,38 +68,23 @@ public class Regular_to_catalog  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		    System.out.println("Unable to get price on Bright Point site");
+		    System.out.println("Phone to Cart: Unable to get price on Bright Point site");
 		   
 		   }
 		   
 		   try
 		   {
 				TimeUnit.SECONDS.sleep(3);
-				System.out.println("straight to catalog: Click 'Clear Cart'");		
+				System.out.println("Phone to Cart: Click 'Clear Cart'");		
 				mydriver.findElement(By.linkText("Clear Cart")).click();
 		   }
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		       System.out.println("Unable to Click 'Clear Cart'");
+		       System.out.println("Phone to Cart: Unable to click 'Clear Cart'");
 		  
 		   }
 
-
-		 System.out.println("Price Comparison/n");
-		 System.out.println(Catalog_Price + " Straight Talk Catalog Price");
-		 System.out.println(Bright_Point_Price + " Bright Point Price");
-				 
-			if (Catalog_Price.equals(Bright_Point_Price)){
-				 System.out.println("Pass statement");
-						System.out.println("rtd-Pass: results are expected");
-						System.out.println("");
-
-					}else {
-						System.out.println("Fail statemetn");
-						System.out.println("rtdFAIL: results are not expected");
-						System.out.println("");		
-						}
 	
 	}
 	

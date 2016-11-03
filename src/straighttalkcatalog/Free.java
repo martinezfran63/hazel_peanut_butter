@@ -1,4 +1,6 @@
 package straighttalkcatalog;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -14,13 +16,13 @@ public class Free  {
     WebDriver mydriver = new ChromeDriver();
 
 	
-	public static void main (WebDriver mydriver,String Bright_Point_Price, String Name, int i, String Catalog_Price) throws IOException{
+	public static void main (WebDriver mydriver,String Bright_Point_Price, String Name, int i, String Catalog_Price, BufferedWriter BW, FileWriter FW) throws IOException{
 		
 		System.out.println("*Please note the price comparision for free devices includes a plan");
 		
 		 try
 		   {
-			 System.out.println("Free: Click on Plan");
+			 System.out.println("Free Phone: Click on Plan");
 			   //Select Plan
 			   mydriver.findElement(By.xpath("/html/body/section[1]/section/div/div/div[1]/a")).click(); 
 			   
@@ -28,7 +30,7 @@ public class Free  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		    System.out.println("Unable to get price on http://specials.straighttalk.com/catalog/");
+			   System.out.println("Free Phone: Unable to get price on 'http://specials.straighttalk.com/catalog/' ");
 		   
 		   }
 		 
@@ -37,7 +39,7 @@ public class Free  {
 		 try
 		   {
 			   TimeUnit.SECONDS.sleep(3);	
-			   System.out.println("Free: Get Price");
+			   System.out.println("Free Phone: Get Price");
 
 			   //Get price
 			   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
@@ -45,7 +47,7 @@ public class Free  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		    System.out.println("Unable to click 'Proceed To bright Point' ");
+		    System.out.println("Free Phone: Unable to click 'Proceed to Bright Point' ");
 		   
 		   }
 
@@ -59,7 +61,7 @@ public class Free  {
 
 			   
 			   TimeUnit.SECONDS.sleep(3);	
-			   System.out.println("CLick 'Proceed to Checkout'");
+			   System.out.println("Free Phone: Click 'Proceed to Checkout'");
 			   
 			   //screen shot on our catalog
 			   PrintScreen.take_screenshot(mydriver, Name, i);
@@ -69,14 +71,14 @@ public class Free  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-			   System.out.println("Unable to click 'Proceed To Checkout' ");
+			   System.out.println("Free Phone: Unable to click 'Proceed To Checkout' ");
 		   
 		   }
 		   
 		   //get price at BP
 		   try
 		   {
-			   System.out.println("Free: Get price at BP");
+			   System.out.println("Free Phone: Get price at BP");
 		       //screen shot on Bright Point Catalog
 		       PrintScreen.take_screenshot(mydriver, Name, i);
 			   //Get price
@@ -87,38 +89,25 @@ public class Free  {
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		    System.out.println("Unable to get price on Bright Point site");
+		    System.out.println("Free Phone: Unable to get price on Bright Point site");
 		   
 		   }
 		   
 		   try
 		   {
 				TimeUnit.SECONDS.sleep(3);
-				System.out.println("Click 'Clear Cart'");		
+				System.out.println("Free Phone: Click 'Clear Cart'");		
 				mydriver.findElement(By.linkText("Clear Cart")).click();
 		   }
 		   catch (Throwable e)
 		   {
 			   PrintScreen.fail(mydriver, Name, i);
-		       System.out.println("Unable to Click 'Clear Cart'");
+		       System.out.println("Free Phone: Unable to Click 'Clear Cart'");
 		  
 		   }
 
 
-		 System.out.println("Price Comparison/n");
-		 System.out.println(Catalog_Price + " Straight Talk Catalog Price");
-		 System.out.println(Bright_Point_Price + " Bright Point Price");
-				 
-			if (Catalog_Price.equals(Bright_Point_Price)){
-				 System.out.println("Pass statement");
-						System.out.println("free Pass: results are expected");
-						System.out.println("");
 
-					}else {
-						System.out.println("Fail statemetn");
-						System.out.println("freeFAIL: results are not expected");
-						System.out.println("");		
-						}
 	
 	}
 	
