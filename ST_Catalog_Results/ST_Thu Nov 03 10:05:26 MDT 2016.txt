@@ -1,0 +1,302 @@
+There are 60 phones currently on the page
+
+#1 Straight Talk Catalog: Galaxy S® 4
+$149.99 Straight Talk Catalog Price
+$149.99 Bright Point Price
+PASS
+
+#2 Straight Talk Catalog: Sunrise™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#3 Straight Talk Catalog: iPhone 5s
+$194.99 Straight Talk Catalog Price
+$194.99 Bright Point Price
+PASS
+
+#4 Straight Talk Catalog: Galaxy S® 4
+$144.99 Straight Talk Catalog Price
+$144.99 Bright Point Price
+PASS
+
+#5 Straight Talk Catalog: Midnight™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#6 Straight Talk Catalog: Pixi Charm™ LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#7 Straight Talk Catalog: Paragon™
+$29.99 Straight Talk Catalog Price
+$29.99 Bright Point Price
+PASS
+
+#8 Straight Talk Catalog: Whirl™ 2
+$45.00 Straight Talk Catalog Price
+$29.99 Bright Point Price
+FAIL
+
+#9 Straight Talk Catalog: Galaxy S® 6
+$499.99 Straight Talk Catalog Price
+$499.99 Bright Point Price
+PASS
+
+#10 Straight Talk Catalog: Pronto LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#11 Straight Talk Catalog: ACCESS™ LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#12 Straight Talk Catalog: Lucky™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#13 Straight Talk Catalog: ACCESS™ LTE
+$79.99 Straight Talk Catalog Price
+$79.99 Bright Point Price
+PASS
+
+#14 Straight Talk Catalog: Lucky™
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#15 Straight Talk Catalog: Galaxy Core Prime™
+$79.99 Straight Talk Catalog Price
+$79.99 Bright Point Price
+PASS
+
+#16 Straight Talk Catalog: Whirl™
+$4.99 Straight Talk Catalog Price
+$4.99 Bright Point Price
+PASS
+
+#17 Straight Talk Catalog: Galaxy Grand Prime™
+$149.99 Straight Talk Catalog Price
+$149.99 Bright Point Price
+PASS
+
+#18 Straight Talk Catalog: Pop NOVA™ LTE
+$59.99 Straight Talk Catalog Price
+$59.99 Bright Point Price
+PASS
+
+#19 Straight Talk Catalog: Unico™ LTE
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#20 Straight Talk Catalog: Atrium™
+$53.99 Straight Talk Catalog Price
+$53.99 Bright Point Price
+PASS
+
+#21 Straight Talk Catalog: Pop MEGA™ LTE
+$149.99 Straight Talk Catalog Price
+$149.99 Bright Point Price
+PASS
+
+#22 Straight Talk Catalog: Unico™ LTE
+$39.99 Straight Talk Catalog Price
+$39.99 Bright Point Price
+PASS
+
+#23 Straight Talk Catalog: Whirl 2
+$9.99 Straight Talk Catalog Price
+$9.99 Bright Point Price
+PASS
+
+#24 Straight Talk Catalog: Solar™
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#25 Straight Talk Catalog: Universal Activation Kit
+$14.99 Straight Talk Catalog Price
+$14.99 Bright Point Price
+PASS
+
+#26 Straight Talk Catalog: Pop Icon™
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#27 Straight Talk Catalog: Magna
+$19.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+***********************FAIL***********************
+
+#28 Straight Talk Catalog: Rapido LTE™
+$99.99 Straight Talk Catalog Price
+$99.99 Bright Point Price
+PASS
+
+#29 Straight Talk Catalog: Sunset™
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#30 Straight Talk Catalog: Zephyr™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#31 Straight Talk Catalog: Raven LTE
+$99.99 Straight Talk Catalog Price
+$99.99 Bright Point Price
+PASS
+
+#32 Straight Talk Catalog: Pop NOVA™ LTE
+$9.99 Straight Talk Catalog Price
+$9.99 Bright Point Price
+PASS
+
+#33 Straight Talk Catalog: 441G
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#34 Straight Talk Catalog: Lever™ LTE
+$199.99 Straight Talk Catalog Price
+$199.99 Bright Point Price
+PASS
+
+#35 Straight Talk Catalog: Stratos™ LTE
+$89.99 Straight Talk Catalog Price
+$89.99 Bright Point Price
+PASS
+
+#36 Straight Talk Catalog: Pop Star™ 2 LTE
+$59.99 Straight Talk Catalog Price
+$59.99 Bright Point Price
+PASS
+
+#37 Straight Talk Catalog: POP ICON 2 LTE
+$79.99 Straight Talk Catalog Price
+$79.99 Bright Point Price
+PASS
+
+#38 Straight Talk Catalog: Allstar™ LTE
+$89.99 Straight Talk Catalog Price
+$89.99 Bright Point Price
+PASS
+
+#39 Straight Talk Catalog: Power™
+$39.99 Straight Talk Catalog Price
+$39.99 Bright Point Price
+PASS
+
+#40 Straight Talk Catalog: Raven LTE
+$69.99 Straight Talk Catalog Price
+$69.99 Bright Point Price
+PASS
+
+#41 Straight Talk Catalog: iPhone 6s
+$650.00 Straight Talk Catalog Price
+$650.00 Bright Point Price
+PASS
+
+#42 Straight Talk Catalog: Pixi Eclipse™
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#43 Straight Talk Catalog: Galaxy Grand Prime™
+$79.99 Straight Talk Catalog Price
+$79.99 Bright Point Price
+PASS
+
+#44 Straight Talk Catalog: 329G
+$14.99 Straight Talk Catalog Price
+$14.99 Bright Point Price
+PASS
+
+#45 Straight Talk Catalog: iPhone 6s
+$650.00 Straight Talk Catalog Price
+$650.00 Bright Point Price
+PASS
+
+#46 Straight Talk Catalog: Max Duo® LTE™
+$199.99 Straight Talk Catalog Price
+$199.99 Bright Point Price
+PASS
+
+#47 Straight Talk Catalog: Sunrise™
+$19.99 Straight Talk Catalog Price
+$19.99 Bright Point Price
+PASS
+
+#48 Straight Talk Catalog: 237C
+$14.99 Straight Talk Catalog Price
+$14.99 Bright Point Price
+PASS
+
+#49 Straight Talk Catalog: iPhone 6
+$400.00 Straight Talk Catalog Price
+$400.00 Bright Point Price
+PASS
+
+#50 Straight Talk Catalog: Sonic™ LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#51 Straight Talk Catalog: iPhone 6s
+$650.00 Straight Talk Catalog Price
+$650.00 Bright Point Price
+PASS
+
+#52 Straight Talk Catalog: iPhone 6s Plus
+$750.00 Straight Talk Catalog Price
+$750.00 Bright Point Price
+PASS
+
+#53 Straight Talk Catalog: iPhone 6s
+$650.00 Straight Talk Catalog Price
+$650.00 Bright Point Price
+PASS
+
+#54 Straight Talk Catalog: Pop Star™ 2 LTE
+$9.99 Straight Talk Catalog Price
+$9.99 Bright Point Price
+PASS
+
+#55 Straight Talk Catalog: Galaxy S® 7
+$599.99 Straight Talk Catalog Price
+$599.99 Bright Point Price
+PASS
+
+#56 Straight Talk Catalog: Galaxy S® 7
+$599.99 Straight Talk Catalog Price
+$599.99 Bright Point Price
+PASS
+
+#57 Straight Talk Catalog: Paragon™
+$29.99 Straight Talk Catalog Price
+$29.99 Bright Point Price
+PASS
+
+#58 Straight Talk Catalog: iPhone 6
+$400.00 Straight Talk Catalog Price
+$400.00 Bright Point Price
+PASS
+
+#59 Straight Talk Catalog: iPhone 6s Plus
+$750.00 Straight Talk Catalog Price
+$750.00 Bright Point Price
+PASS
+
+#60 Straight Talk Catalog: Pixi™ Glory LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+

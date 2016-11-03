@@ -22,7 +22,7 @@ public class StraightTalk_Catalog{
     WebDriver mydriver = new ChromeDriver();
     
 	 //Create File In C: Driver.  
-	  String TestFile = "/Users/fmartinez/Documents/workspace/IMM_Selenium/Text_Output/Straight_Talk_Catalog_" +new java.util.Date()+ ".txt";
+	  String TestFile = "/Users/fmartinez/Documents/workspace/IMM_Selenium/ST_Catalog_Results/ST_" +new java.util.Date()+ ".txt";
 	  File FC = new File(TestFile);//Created object of java File class.
 	  FC.createNewFile();//Create file.
 	  //Writing In to file.
@@ -89,7 +89,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 1; i<=2 ;i++){
+	for(int i = 1; i<=count ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
@@ -159,6 +159,7 @@ public class StraightTalk_Catalog{
 		   Catalog_Price=mydriver.findElement(By.xpath("html/body/section[1]/div[3]/ul/li["+i+"]/div[4]")).getText();
 			
 		   //Prompt informing user of number of device #, device name, device price
+		   System.out.println("\n");
 		   System.out.println("#"+ i+ " " + "Straight Talk Catalog: "+ Name);
 		   BW.write("#"+ i+ " " + "Straight Talk Catalog: "+ Name); //Writing In To File.
 		   BW.newLine();//To write next string on new line.
@@ -170,7 +171,123 @@ public class StraightTalk_Catalog{
 		   //if else statement. if equal to 'FREE' the program follows steps for free phone
 		   if (Catalog_Price.equals("FREE"))   
 		   {
-			   Free.main(mydriver, Bright_Point_Price, Name, i, Catalog_Price, BW, FW);
+
+				
+											System.out.println("*Please note the price comparision for free devices includes a plan");
+											
+											 try
+											   {
+												 System.out.println("Free Phone: Click on Plan");
+												   //Select Plan
+												   mydriver.findElement(By.xpath("/html/body/section[1]/section/div/div/div[1]/a")).click(); 
+												   
+											   }
+											   catch (Throwable e)
+											   {
+												   PrintScreen.fail(mydriver, Name, i);
+												   System.out.println("Free Phone: Unable to get price on 'http://specials.straighttalk.com/catalog/' ");
+											   
+											   }
+											 
+											 
+											  //Get price on our catalog
+											 try
+											   {
+												   TimeUnit.SECONDS.sleep(3);	
+												   System.out.println("Free Phone: Get Price");
+								
+												   //Get price
+												   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
+											   }
+											   catch (Throwable e)
+											   {
+												   PrintScreen.fail(mydriver, Name, i);
+											    System.out.println("Free Phone: Unable to click 'Proceed to Bright Point' ");
+											   
+											   }
+								
+								
+											   try
+											   {
+								
+												   //reassign amount
+												   TimeUnit.SECONDS.sleep(3);
+												   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[4]/td[2]")).getText(); 
+								
+												   
+												   TimeUnit.SECONDS.sleep(3);	
+												   System.out.println("Free Phone: Click 'Proceed to Checkout'");
+												   
+												   //screen shot on our catalog
+												   PrintScreen.take_screenshot(mydriver, Name, i);
+												   //Select Proceed to checkout
+												   mydriver.findElement(By.id("_ga_catalog_checkout")).click();
+											   }
+											   catch (Throwable e)
+											   {
+												   PrintScreen.fail(mydriver, Name, i);
+												   System.out.println("Free Phone: Unable to click 'Proceed To Checkout' ");
+											   
+											   }
+											   
+											   //get price at BP
+											   try
+											   {
+												   System.out.println("Free Phone: Get price at BP");
+											       //screen shot on Bright Point Catalog
+											       PrintScreen.take_screenshot(mydriver, Name, i);
+												   //Get price
+												   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
+											       TimeUnit.SECONDS.sleep(3);
+								
+											   }
+											   catch (Throwable e)
+											   {
+												   PrintScreen.fail(mydriver, Name, i);
+											    System.out.println("Free Phone: Unable to get price on Bright Point site");
+											   
+											   }
+											   
+											   try
+											   {
+													TimeUnit.SECONDS.sleep(3);
+													System.out.println("Free Phone: Click 'Clear Cart'");		
+													mydriver.findElement(By.linkText("Clear Cart")).click();
+											   }
+											   catch (Throwable e)
+											   {
+												   PrintScreen.fail(mydriver, Name, i);
+											       System.out.println("Free Phone: Unable to Click 'Clear Cart'");
+											  
+											   }
+											   
+											   System.out.println("Free Phone: Writing to Text File");
+											   BW.write(Catalog_Price +" Straight Talk Catalog Price"); //Writing In To File.
+											   BW.newLine();//To write next string on new line.
+											   BW.write(Bright_Point_Price +" Bright Point Price"); //Writing In To File.
+											   BW.newLine();//To write next string on new line.
+
+											   System.out.println(Catalog_Price + " Straight Talk Catalog Price");
+											   System.out.println(Bright_Point_Price + " Bright Point Price");
+
+											   		//code to compare our Catalog Price with BP price
+													if (Catalog_Price.equals(Bright_Point_Price)){
+
+								 						System.out.println("Free Phone: PASS\n");
+								 						BW.write("PASS"); //Writing In To File.
+								 						BW.newLine();//To write next string on new line.
+								 						BW.newLine();//To write next string on new line.
+								 						
+								 					}else {
+
+								 						System.out.println("Free Phone: ***********************FAIL***********************");
+								 						BW.write("FAIL"); //Writing In To File.
+								 						BW.newLine();//To write next string on new line.
+								 						BW.newLine();//To write next string on new line.
+								 						
+								 					}
+				
+			
 		   }
 		   
 		   //flow for phones that are not free
@@ -186,16 +303,80 @@ public class StraightTalk_Catalog{
 											  
 											  //Select Plan
 											  mydriver.findElement(By.xpath("/html/body/section[1]/section/div/div/div[1]/a")).click(); 
-											  System.out.println("*Please note the price comparision for this device includes a plan. Unable to find 'Select Buy Phone only'");
+											  System.out.println("*Please note the price comparision for this device includes a plan due to there being no option to buy phone only'");
 						   
 											} else if (mydriver.findElements(By.xpath("/html/body/section[1]/section/div/div/div[1]/a")).size() == 0) {
 											    // block of code to be executed if the condition1 is false and condition2 is true
 												//regular phone that goes straight to cart
-												System.out.println("*For regular phones that go straight to cart");
-												Regular_to_catalog.main(mydriver, Bright_Point_Price, Name, i, Catalog_Price);
-												
-												
-												break;
+												//was unable to test
+
+																 System.out.println(" *For regular phones that go straight to cart ");
+																	
+																	  //Get price on our catalog
+																	 try
+																	   {
+																		   TimeUnit.SECONDS.sleep(3);	
+																		   System.out.println("Phone to Cart: Get Price");
+					
+																		   //Get price
+																		   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
+																	   }
+																	   catch (Throwable e)
+																	   {
+																		   PrintScreen.fail(mydriver, Name, i);
+																	    System.out.println("Phone to Cart: Unable to click 'Proceed To bright Point' ");
+																	   
+																	   }
+					
+					
+																	   try
+																	   {
+																		   TimeUnit.SECONDS.sleep(3);	
+																		   System.out.println("Phone to Cart: Click 'Proceed to Checkout'");
+																		   
+																		   //screen shot on our catalog
+																		   PrintScreen.take_screenshot(mydriver, Name, i);
+																		   //Select Proceed to checkout
+																		   mydriver.findElement(By.id("_ga_catalog_checkout")).click();
+																	   }
+																	   catch (Throwable e)
+																	   {
+																		   PrintScreen.fail(mydriver, Name, i);
+																		   System.out.println("Phone to Cart: Unable to click 'Proceed To Checkout' ");
+																	   
+																	   }
+																	   
+																	   //get price at BP
+																	   try
+																	   {
+																		   System.out.println("Phone to Cart: Get price at BP");
+																		   //screen shot on Bright Point Catalog
+																	       PrintScreen.take_screenshot(mydriver, Name, i);
+																		   //Get price
+																		   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
+																	       TimeUnit.SECONDS.sleep(3);
+																	      
+																	   }
+																	   catch (Throwable e)
+																	   {
+																		   PrintScreen.fail(mydriver, Name, i);
+																	    System.out.println("Phone to Cart: Unable to get price on Bright Point site");
+																	   
+																	   }
+																	   
+																	   try
+																	   {
+																			TimeUnit.SECONDS.sleep(3);
+																			System.out.println("Phone to Cart: Click 'Clear Cart'");		
+																			mydriver.findElement(By.linkText("Clear Cart")).click();
+																	   }
+																	   catch (Throwable e)
+																	   {
+																		   PrintScreen.fail(mydriver, Name, i);
+																	       System.out.println("Phone to Cart: Unable to click 'Clear Cart'");
+																	  
+																	   }
+																	   break;
 											} else {
 											     //block of code to be executed if the condition1 is false and condition2 is false
 												 //Select Buy Phone Only. path for most phones
@@ -287,7 +468,9 @@ public class StraightTalk_Catalog{
 				   PrintScreen.fail(mydriver, Name, i);
 				   System.out.println("Unable to click 'Continue Shopping' to start next price check");
 			   }
-
+			   
+			   
+			   System.out.println("Writing to Text File");
 			   BW.write(Catalog_Price +" Straight Talk Catalog Price"); //Writing In To File.
 			   BW.newLine();//To write next string on new line.
 			   BW.write(Bright_Point_Price +" Bright Point Price"); //Writing In To File.
@@ -306,7 +489,7 @@ public class StraightTalk_Catalog{
  						
  					}else {
 
- 						System.out.println("FAIL\n");
+ 						System.out.println("***********************FAIL***********************");
  						BW.write("FAIL"); //Writing In To File.
  						BW.newLine();//To write next string on new line.
  						BW.newLine();//To write next string on new line.
