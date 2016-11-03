@@ -1,8 +1,12 @@
 package straighttalkcatalog;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -22,7 +26,8 @@ public class StraightTalk_Catalog{
     WebDriver mydriver = new ChromeDriver();
     
 	 //Create File In C: Driver.  
-	  String TestFile = "/Users/fmartinez/Documents/workspace/IMM_Selenium/ST_Catalog_Results/ST_" +new java.util.Date()+ ".txt";
+      Date myDate = new Date();
+	  String TestFile = "/Users/fmartinez/Documents/workspace/IMM_Selenium/ST_Catalog_Results/ST_" + new SimpleDateFormat("MMM-dd-yyyy h:m a").format(myDate) + ".txt";
 	  File FC = new File(TestFile);//Created object of java File class.
 	  FC.createNewFile();//Create file.
 	  //Writing In to file.
@@ -490,7 +495,7 @@ public class StraightTalk_Catalog{
  					}else {
 
  						System.out.println("***********************FAIL***********************");
- 						BW.write("FAIL"); //Writing In To File.
+ 						BW.write("***********************FAIL***********************"); //Writing In To File.
  						BW.newLine();//To write next string on new line.
  						BW.newLine();//To write next string on new line.
  						
