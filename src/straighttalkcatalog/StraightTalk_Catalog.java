@@ -94,7 +94,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 11; i<=11 ;i++){
+	for(int i = 8; i<=8 ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
@@ -290,7 +290,7 @@ public class StraightTalk_Catalog{
 								 					}else {
 
 								 						System.out.println("Free Phone: ***********************FAIL***********************");
-								 						BW.write("FAIL"); //Writing In To File.
+								 						BW.write("***********************FAIL***********************"); //Writing In To File.
 								 						BW.newLine();//To write next string on new line.
 								 						BW.newLine();//To write next string on new line.
 								 						

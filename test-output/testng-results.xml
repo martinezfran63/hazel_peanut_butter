@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Catalog Check Suite" duration-ms="6" started-at="2016-11-04T19:15:14Z" finished-at="2016-11-04T19:15:14Z">
+    <groups>
+    </groups>
+    <test name="Straight Talk Catalog Check" duration-ms="6" started-at="2016-11-04T19:15:14Z" finished-at="2016-11-04T19:15:14Z">
+    </test> <!-- Straight Talk Catalog Check -->
+  </suite> <!-- Catalog Check Suite -->
+</testng-results>
