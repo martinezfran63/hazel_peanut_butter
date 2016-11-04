@@ -27,7 +27,7 @@ public class PrintScreen  {
 		Date myDate = new Date();
 		
 		//FileUtils.copyFile(scrFile, new File("Screenshots/" + new java.util.Date() + ".png" ));
-		FileUtils.copyFile(scrFile, new File("Screenshots/" + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
+		FileUtils.copyFile(scrFile, new File("ST_Catalog_Results/" + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
 		
 	}
 	
@@ -41,11 +41,10 @@ public class PrintScreen  {
 			//FileUtils.copyFile(scrFile, new File("Screenshots/" + i + "_" + NameOfDevice + "_" + new java.util.Date() + ".png" ));
 
 			Date myDate = new Date();
+			FileUtils.copyFile(scrFile, new File("ST_Catalog_Results/" + i + " " + NameOfDevice + " " + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
 
-			FileUtils.copyFile(scrFile, new File("Screenshots/" + i + " " + NameOfDevice + " " + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
-			
-			
-		}
+
+	}
 	
 	
 	
@@ -57,7 +56,7 @@ public class PrintScreen  {
 			Date myDate = new Date();
 			
 			//FileUtils.copyFile(scrFile, new File("Screenshots/Failed/" + i + "_FAIL_" + NameOfDevice + "_" + new java.util.Date() + ".png" ));	
-			FileUtils.copyFile(scrFile, new File("Screenshots/Failed/" + i + "_FAIL_" + NameOfDevice + "_" + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
+			FileUtils.copyFile(scrFile, new File("ST_Catalog_Results/" + i + "_FAIL_" + NameOfDevice + "_" + new SimpleDateFormat("MMM-dd-yyyy h:m:s a").format(myDate) + ".png" ));
 
 		}
 

@@ -94,7 +94,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 1; i<=9 ;i++){
+	for(int i = 11; i<=11 ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
@@ -308,7 +308,7 @@ public class StraightTalk_Catalog{
 										   if (mydriver.findElements(By.xpath("html/body/section[1]/section/div/a")).size() == 0) {
 											    //block of code to be executed if condition1 is true
 											    //regular phone that asks to select plan
-											    System.out.println("*For regular phone where Select Buy Phone Only' link not present. Need to click on Plan and do comparison with plan");
+											    System.out.println("*For regular phone where 'Select Buy Phone Only' link not present. Need to click on plan and do comparison with plan");
 											  
 											  //Select Plan
 											  mydriver.findElement(By.xpath("/html/body/section[1]/section/div/div/div[1]/a")).click(); 
@@ -403,8 +403,10 @@ public class StraightTalk_Catalog{
 			   }
 			   catch (Throwable e)
 			   {
-				PrintScreen.fail(mydriver, Name, i);
-			    System.out.println("Unable to select 'Buy Phone Only'");
+				//PrintScreen.fail(mydriver, Name, i);
+			    //System.out.println("Unable to select 'Buy Phone Only'");
+				   
+				 System.out.println("'Buy Phone Only' option not selected.");
 			   }
 
 			   
@@ -517,6 +519,8 @@ public class StraightTalk_Catalog{
 								
 	     System.out.println("\n\n\nEND OF TEST!\n");
 	     BW.close();
+	     mydriver.quit();
+	     
 	
 				} /* end of major for loop */
 	
