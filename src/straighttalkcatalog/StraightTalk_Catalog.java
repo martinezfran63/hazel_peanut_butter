@@ -94,7 +94,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 8; i<=8 ;i++){
+	for(int i = 2; i<=2 ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
@@ -218,8 +218,8 @@ public class StraightTalk_Catalog{
 								
 												   //reassign amount
 												   TimeUnit.SECONDS.sleep(3);
-												   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[4]/td[2]")).getText(); 
-								
+												   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]")).getText(); 
+
 												   
 												   TimeUnit.SECONDS.sleep(3);	
 												   System.out.println("Free Phone: Click 'Proceed to Checkout'");
