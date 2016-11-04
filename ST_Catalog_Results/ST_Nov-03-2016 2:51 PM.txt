@@ -1,0 +1,47 @@
+There are 61 phones currently on the page
+
+#1 Straight Talk Catalog: Galaxy S® 4
+$149.99 Straight Talk Catalog Price
+$149.99 Bright Point Price
+PASS
+
+#2 Straight Talk Catalog: Sunrise™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#3 Straight Talk Catalog: iPhone 5s
+$194.99 Straight Talk Catalog Price
+$194.99 Bright Point Price
+PASS
+
+#4 Straight Talk Catalog: Galaxy S® 4
+$144.99 Straight Talk Catalog Price
+$144.99 Bright Point Price
+PASS
+
+#5 Straight Talk Catalog: Midnight™
+$45.00 Straight Talk Catalog Price
+$45.00 Bright Point Price
+PASS
+
+#6 Straight Talk Catalog: Pixi Charm™ LTE
+$49.99 Straight Talk Catalog Price
+$49.99 Bright Point Price
+PASS
+
+#7 Straight Talk Catalog: Paragon™
+$29.99 Straight Talk Catalog Price
+$29.99 Bright Point Price
+PASS
+
+#8 Straight Talk Catalog: Whirl™ 2
+$45.00 Straight Talk Catalog Price
+null Bright Point Price
+FAIL
+
+#9 Straight Talk Catalog: Galaxy S® 6
+$499.99 Straight Talk Catalog Price
+$499.99 Bright Point Price
+PASS
+

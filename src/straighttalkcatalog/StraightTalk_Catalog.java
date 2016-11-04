@@ -94,7 +94,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 1; i<=count ;i++){
+	for(int i = 1; i<=9 ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
@@ -202,6 +202,7 @@ public class StraightTalk_Catalog{
 												   System.out.println("Free Phone: Get Price");
 								
 												   //Get price
+												   Catalog_Price= "0";
 												   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
 											   }
 											   catch (Throwable e)
@@ -226,6 +227,7 @@ public class StraightTalk_Catalog{
 												   //screen shot on our catalog
 												   PrintScreen.take_screenshot(mydriver, Name, i);
 												   //Select Proceed to checkout
+												   TimeUnit.SECONDS.sleep(3);
 												   mydriver.findElement(By.id("_ga_catalog_checkout")).click();
 											   }
 											   catch (Throwable e)
@@ -241,9 +243,11 @@ public class StraightTalk_Catalog{
 												   System.out.println("Free Phone: Get price at BP");
 											       //screen shot on Bright Point Catalog
 											       PrintScreen.take_screenshot(mydriver, Name, i);
-												   //Get price
-												   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
 											       TimeUnit.SECONDS.sleep(3);
+												   //Get price
+											       Bright_Point_Price = null;
+												   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
+											       
 								
 											   }
 											   catch (Throwable e)
@@ -324,6 +328,7 @@ public class StraightTalk_Catalog{
 																		   System.out.println("Phone to Cart: Get Price");
 					
 																		   //Get price
+																		   Catalog_Price = null;
 																		   Catalog_Price=mydriver.findElement(By.xpath("/html/body/section[1]/div/form/table/tbody/tr[2]/td[3]/div")).getText();	   
 																	   }
 																	   catch (Throwable e)
@@ -358,6 +363,7 @@ public class StraightTalk_Catalog{
 																		   //screen shot on Bright Point Catalog
 																	       PrintScreen.take_screenshot(mydriver, Name, i);
 																		   //Get price
+																	       Bright_Point_Price = null;
 																		   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
 																	       TimeUnit.SECONDS.sleep(3);
 																	      
@@ -437,6 +443,7 @@ public class StraightTalk_Catalog{
 				   System.out.println("Print Screen at BP site");
 			       PrintScreen.take_screenshot(mydriver, Name, i);
 				   //Get price
+			       Bright_Point_Price = null;
 				   Bright_Point_Price=mydriver.findElement(By.cssSelector("td.cartPriceCol")).getText();
  
 			   }
