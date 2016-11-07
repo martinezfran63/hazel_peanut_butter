@@ -94,7 +94,7 @@ public class StraightTalk_Catalog{
 	//i is device count. set to device your having error at so you don't have to go through each device during execution
 	// i=1 to start from beginning
 	//for(int i = 1; i<=count ;i++){
-	for(int i = 2; i<=2 ;i++){
+	for(int i = 1; i<=count ;i++){
 	
     // go back to catalog page after each individual phone comparison done
 	mydriver.navigate() .to(myURL);
