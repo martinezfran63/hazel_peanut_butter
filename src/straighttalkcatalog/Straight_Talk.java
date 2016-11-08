@@ -24,17 +24,19 @@ public class Straight_Talk {
 		System.out.println("Test Executed: " + new java.util.Date());
 		
 
-
-	   // Get Chrome Driver for testing
-	   // System.setProperty("webdriver.chrome.driver", "chromedriver");
-	  //WebDriver mydriver = new ChromeDriver();
+ 
+	     // Get Chrome Driver for testing
+	     System.setProperty("webdriver.chrome.driver", "chromedriver");
+	     WebDriver mydriver = new ChromeDriver();
 	    
-		WebDriver driver = new FirefoxDriver();
+		  //WebDriver driver = new FirefoxDriver();
 		
-		 //Create File In C: Driver.  
+		  //Create File In C: Driver.  
 	      Date myDate = new Date();
-		  String TestFile = "C:/IMM_Selenium/ST_Catalog_Results/ST" + new SimpleDateFormat("MMM-dd-yyyy h:m a").format(myDate) + ".txt";
+	      String TestFile = "/Users/fmartinez/Documents/workspace/IMM_Selenium/ST_Catalog_Results/ST_" + new SimpleDateFormat("MMM-dd-yyyy h:m a").format(myDate) + ".txt";
 		 
+	      //String TestFile = "C:/Users/IT/Desktop/ST_Catalog_Results/ST" + new SimpleDateFormat("MMM-dd-yyyy h:m a").format(myDate) + ".txt";
+	      
 		  File FC = new File(TestFile);//Created object of java File class.
 		  FC.createNewFile();//Create file.
 		  //Writing In to file.

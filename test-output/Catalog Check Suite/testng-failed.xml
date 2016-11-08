@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Catalog Check Suite]">
+  <test name="Straight Talk Catalog Check(failed)">
+    <classes>
+      <class name="straighttalkcatalog.Straight_Talk">
+        <methods>
+          <include name="f"/>
+        </methods>
+      </class> <!-- straighttalkcatalog.Straight_Talk -->
+    </classes>
+  </test> <!-- Straight Talk Catalog Check(failed) -->
+</suite> <!-- Failed suite [Catalog Check Suite] -->
