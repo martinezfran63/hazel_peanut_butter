@@ -53,7 +53,7 @@ public class Straight_Talk {
 		 
 		Bright_Point_Price = "0";
 		myURL="http://specials.straighttalk.com/catalog/";
-		zip1="80301";
+		zip1="80602";
 
 
 		// Navigate to Net10wireless.com
